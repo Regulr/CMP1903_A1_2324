@@ -17,14 +17,14 @@ namespace CMP1903_A1_2324
         private int _dieValue;
         public int DieValue; 
         { 
-            get => _dieValue; set => _dieValue = roll(); 
+            get => _dieValue; set => _dieValue = value; 
         }
 
         //Method
-        int roll()
+        int Roll()
         {
             Random rdm = new Random();
-            return rdm.Next(0,7);
+            DieValue = rdm.Next(0,7);
         }
 
     }
