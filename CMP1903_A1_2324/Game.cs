@@ -16,13 +16,19 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
-        int play()
+        List<int> Play()
         {
-            int[] dieArray = new int[3]
-            Die die = new Die();
-            die.Roll();
-            Console.WriteLine(die.DieValue);
+            List<int> dieList = new List<int>();
+            for (int count = 0; count < 3; count++)
+            {
+                Die die = new Die()
+                die.Roll();
+                dieList.Add(die.DieValue); 
+            }
+            Console.WriteLine("1." + dieList[0]);
+            Console.WriteLine("2." + dieList[1]);
+            Console.WriteLine("3." + dieList[2]);
+            Console.WriteLine("Overall you rolled a" + dieList.Sum());
         }
-
     }
 }
